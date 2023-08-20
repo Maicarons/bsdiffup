@@ -5,7 +5,6 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"io"
-	"io/ioutil"
 	"log"
 	"os"
 	"path/filepath"
@@ -18,10 +17,17 @@ deleted
 modified
 added
 */
+
+type FileDiffType string
+
+const FileDiffTypeDeleted = "deleted"
+const FileDiffTypeModified = "modified"
+const FileDiffTypeAdded = "added"
+
 type FileDiff struct {
-	Path string `json:"path"`
-	Type string `json:"type"`
-	MD5  string `json:"md5"`
+	Path string       `json:"path"`
+	Type FileDiffType `json:"type"`
+	MD5  string       `json:"md5"`
 }
 
 func GoDiff(Path1, Path2 string) (string, error) {
@@ -155,12 +161,12 @@ func containsFile(files []string, file string) bool {
 }
 
 func compareFileContent(file1, file2 string) bool {
-	content1, err := ioutil.ReadFile(file1)
+	content1, err := os.ReadFile(file1)
 	if err != nil {
 		return false
 	}
 
-	content2, err := ioutil.ReadFile(file2)
+	content2, err := os.ReadFile(file2)
 	if err != nil {
 		return false
 	}

@@ -1,0 +1,22 @@
+[
+  {
+    "path":"good\\apple.html",
+    "type":"deleted",
+    "md5":"6620d7be0e9e40f4bd3c0a5a86590ecf"
+  },
+  {
+    "path":"good\\food.bin",
+    "type":"modified",
+    "md5":"d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
+    "path":"img.bmp",
+    "type":"modified",
+    "md5":"9f7c76cbd9a189856db543a95654d5c5"
+  },
+  {
+    "path":"main.py",
+    "type":"added",
+    "md5":"a53826cc458d6ba62653e9d66f23d4e9"
+  }
+]
