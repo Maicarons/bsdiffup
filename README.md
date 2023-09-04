@@ -30,7 +30,7 @@ bsdiffup - BSDiff Update Tool
 
 ```text
 {FileName}_{Semver}.zip
-e.g. bsd_1.2.0.zip | update_1.2.0.zip
+e.g. update_1.2.0.zip | exampleFile_1.2.3-alpha.1+build123.zip
 
 Path
 -.
@@ -68,5 +68,5 @@ Path
 
 ## VERSION Format
 ```VERSION
-1.2.0
+1.2.3-alpha.1+build123
 ```
